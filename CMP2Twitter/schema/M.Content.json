@@ -3,7 +3,7 @@
   "data": {
     "id": 130,
     "name": "M.Content",
-    "modified_on": "2020-07-09T02:02:24.1280522Z",
+    "modified_on": "2020-12-18T02:26:56.7860128Z",
     "created_on": "2019-11-28T15:52:29.4585985Z",
     "display_template": "{Content.Name}",
     "is_taxonomy_item_definition": false,
@@ -108,7 +108,10 @@
             "is_path_hierarchy_relation": false,
             "path_hierarchy_score": 0,
             "is_rendition_relation": false,
-            "associated_labels": {},
+            "associated_labels": {
+              "en-US": "State users (Content)",
+              "ja-JP": "ステートユーザー（コンテンツ）"
+            },
             "name": "StateUserToMContent",
             "labels": {
               "en-US": "Users",
@@ -306,7 +309,10 @@
             "is_path_hierarchy_relation": false,
             "path_hierarchy_score": 0,
             "is_rendition_relation": false,
-            "associated_labels": {},
+            "associated_labels": {
+              "en-US": "Contents",
+              "ja-JP": "コンテンツ"
+            },
             "name": "TagToContent",
             "labels": {
               "en-US": "Tag to content",
@@ -449,6 +455,44 @@
             "role": 1,
             "cardinality": 1,
             "associated_entitydefinition": {
+              "href": "M.CMP.PublicationStatus",
+              "title": "The associated entity definition for this relation."
+            },
+            "child_is_mandatory": false,
+            "parent_is_mandatory": false,
+            "inherits_security": false,
+            "allow_navigation": true,
+            "is_nested": false,
+            "is_taxonomy_relation": true,
+            "is_taxonomy_hierarchy_relation": false,
+            "content_is_copied": false,
+            "completion_is_copied": false,
+            "is_path_relation": false,
+            "is_path_hierarchy_relation": false,
+            "path_hierarchy_score": 0,
+            "is_rendition_relation": false,
+            "associated_labels": {
+              "en-US": "Content",
+              "ja-JP": "コンテンツ"
+            },
+            "name": "PublicationStatusToContent",
+            "labels": {
+              "en-US": "Publication status",
+              "ja-JP": "公開ステータス"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
+          },
+          {
+            "type": "Relation",
+            "role": 1,
+            "cardinality": 1,
+            "associated_entitydefinition": {
               "href": "M.ContentType",
               "title": "The associated entity definition for this relation."
             },
@@ -507,7 +551,10 @@
             "is_path_hierarchy_relation": false,
             "path_hierarchy_score": 0,
             "is_rendition_relation": false,
-            "associated_labels": {},
+            "associated_labels": {
+              "en-US": "Contents",
+              "ja-JP": "コンテンツ"
+            },
             "name": "AudienceToContent",
             "labels": {
               "en-US": "Audience",
@@ -580,7 +627,10 @@
             "is_path_hierarchy_relation": false,
             "path_hierarchy_score": 0,
             "is_rendition_relation": false,
-            "associated_labels": {},
+            "associated_labels": {
+              "en-US": "Contents",
+              "ja-JP": "コンテンツ"
+            },
             "name": "RegionToContent",
             "labels": {
               "en-US": "Region",
@@ -668,44 +718,6 @@
             "conditions": [],
             "can_trigger_conditional_members": false,
             "is_system_owned": true,
-            "is_secured": false,
-            "allow_updates": true
-          },
-          {
-            "type": "Relation",
-            "role": 1,
-            "cardinality": 1,
-            "associated_entitydefinition": {
-              "href": "M.CMP.PublicationStatus",
-              "title": "The associated entity definition for this relation."
-            },
-            "child_is_mandatory": false,
-            "parent_is_mandatory": false,
-            "inherits_security": false,
-            "allow_navigation": true,
-            "is_nested": false,
-            "is_taxonomy_relation": true,
-            "is_taxonomy_hierarchy_relation": false,
-            "content_is_copied": false,
-            "completion_is_copied": false,
-            "is_path_relation": false,
-            "is_path_hierarchy_relation": false,
-            "path_hierarchy_score": 0,
-            "is_rendition_relation": false,
-            "associated_labels": {
-              "en-US": "Content",
-              "ja-JP": "コンテンツ"
-            },
-            "name": "PublicationStatusToContent",
-            "labels": {
-              "en-US": "Publication status",
-              "ja-JP": "公開ステータス"
-            },
-            "helptext": {},
-            "is_conditional": false,
-            "conditions": [],
-            "can_trigger_conditional_members": false,
-            "is_system_owned": false,
             "is_secured": false,
             "allow_updates": true
           }
@@ -977,6 +989,44 @@
             "is_system_owned": false,
             "is_secured": false,
             "allow_updates": true
+          },
+          {
+            "type": "Relation",
+            "role": 0,
+            "cardinality": 1,
+            "associated_entitydefinition": {
+              "href": "M.Usage",
+              "title": "The associated entity definition for this relation."
+            },
+            "child_is_mandatory": false,
+            "parent_is_mandatory": false,
+            "inherits_security": false,
+            "allow_navigation": true,
+            "is_nested": false,
+            "is_taxonomy_relation": false,
+            "is_taxonomy_hierarchy_relation": false,
+            "content_is_copied": false,
+            "completion_is_copied": false,
+            "is_path_relation": false,
+            "is_path_hierarchy_relation": false,
+            "path_hierarchy_score": 0,
+            "is_rendition_relation": false,
+            "associated_labels": {
+              "en-US": "Content",
+              "ja-JP": "コンテンツ"
+            },
+            "name": "ContentToUsage",
+            "labels": {
+              "en-US": "Publications",
+              "ja-JP": "出版物"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
           }
         ],
         "is_system_owned": true,
@@ -1088,7 +1138,10 @@
             "is_path_hierarchy_relation": false,
             "path_hierarchy_score": 0,
             "is_rendition_relation": false,
-            "associated_labels": {},
+            "associated_labels": {
+              "en-US": "Contents",
+              "ja-JP": "コンテンツ"
+            },
             "name": "ContentToLinkedFragment",
             "labels": {
               "en-US": "Linked fragments",
@@ -1149,6 +1202,7 @@
       {
         "name": "Versioning",
         "labels": {
+          "en-US": "Versioning",
           "ja-JP": "バージョン"
         },
         "members": [
@@ -1203,7 +1257,10 @@
               "ja-JP": "現在のマスタ コンテンツ"
             },
             "name": "MasterContentVersion",
-            "labels": {},
+            "labels": {
+              "en-US": "Master content version",
+              "ja-JP": "マスターコンテンツバージョン"
+            },
             "helptext": {},
             "is_conditional": false,
             "conditions": [],
@@ -1222,7 +1279,7 @@
             },
             "child_is_mandatory": false,
             "parent_is_mandatory": true,
-            "inherits_security": false,
+            "inherits_security": true,
             "allow_navigation": true,
             "is_nested": false,
             "is_taxonomy_relation": false,
@@ -1238,7 +1295,10 @@
               "ja-JP": "現在のコンテンツ"
             },
             "name": "ContentVersionHistory",
-            "labels": {},
+            "labels": {
+              "en-US": "Content version history",
+              "ja-JP": "コンテンツバージョン履歴"
+            },
             "helptext": {},
             "is_conditional": false,
             "conditions": [],
@@ -1256,6 +1316,7 @@
       {
         "name": "System",
         "labels": {
+          "en-US": "System",
           "ja-JP": "システム"
         },
         "members": [
@@ -1402,6 +1463,44 @@
             "labels": {
               "en-US": "Active states",
               "ja-JP": "アクティブな状態"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": true,
+            "is_secured": false,
+            "allow_updates": true
+          },
+          {
+            "type": "Relation",
+            "role": 1,
+            "cardinality": 2,
+            "associated_entitydefinition": {
+              "href": "M.Content.Repository",
+              "title": "The associated entity definition for this relation."
+            },
+            "child_is_mandatory": false,
+            "parent_is_mandatory": false,
+            "inherits_security": true,
+            "allow_navigation": true,
+            "is_nested": false,
+            "is_taxonomy_relation": true,
+            "is_taxonomy_hierarchy_relation": false,
+            "content_is_copied": false,
+            "completion_is_copied": false,
+            "is_path_relation": false,
+            "is_path_hierarchy_relation": false,
+            "path_hierarchy_score": 0,
+            "is_rendition_relation": false,
+            "associated_labels": {
+              "en-US": "Content Repository",
+              "ja-JP": "コンテンツリポジトリ"
+            },
+            "name": "ContentRepositoryToContent",
+            "labels": {
+              "en-US": "Content Repository",
+              "ja-JP": "コンテンツ リポジトリ"
             },
             "helptext": {},
             "is_conditional": false,
@@ -2026,7 +2125,7 @@
             "name": "Webinar_Description",
             "labels": {
               "en-US": "Description",
-              "ja-JP": "説明"
+              "ja-JP": "概要"
             },
             "helptext": {
               "en-US": "Edit webinar description text here",
@@ -2414,7 +2513,10 @@
             "is_path_hierarchy_relation": false,
             "path_hierarchy_score": 0,
             "is_rendition_relation": false,
-            "associated_labels": {},
+            "associated_labels": {
+              "en-US": "Assigned users (Content)",
+              "ja-JP": "割り当てられたユーザー（コンテンツ）"
+            },
             "name": "AssignedUserToMContent",
             "labels": {
               "en-US": "Assigned users",
@@ -2449,7 +2551,10 @@
             "is_path_hierarchy_relation": false,
             "path_hierarchy_score": 0,
             "is_rendition_relation": false,
-            "associated_labels": {},
+            "associated_labels": {
+              "en-US": "Assigned usergroups (Content)",
+              "ja-JP": "割り当てられたユーザー グループ（コンテンツ）"
+            },
             "name": "AssignedUserGroupToMContent",
             "labels": {
               "en-US": "Assigned user groups",
@@ -2470,415 +2575,12 @@
         "is_secured": false
       },
       {
-        "name": "FitnessEvent_Content",
-        "content_group": "content",
-        "labels": {
-          "en-US": "Content (Fitness Event)",
-          "ja-JP": "コンテンツ（フィットネスイベント）"
-        },
-        "members": [
-          {
-            "type": "String",
-            "content_type": 0,
-            "validation_expression": null,
-            "is_indexed": false,
-            "is_mandatory": false,
-            "is_multilanguage": false,
-            "is_multivalue": false,
-            "is_unique": false,
-            "boost": false,
-            "included_in_content": true,
-            "included_in_completion": false,
-            "ignore_on_export": false,
-            "stored_in_graph": false,
-            "name": "FitnessEvent_Pagetitle",
-            "labels": {
-              "en-US": "Page title",
-              "ja-JP": "ページタイトル"
-            },
-            "helptext": {},
-            "is_conditional": false,
-            "conditions": [],
-            "can_trigger_conditional_members": false,
-            "is_system_owned": false,
-            "is_secured": false,
-            "allow_updates": true
-          },
-          {
-            "type": "String",
-            "content_type": 0,
-            "validation_expression": null,
-            "is_indexed": false,
-            "is_mandatory": false,
-            "is_multilanguage": false,
-            "is_multivalue": false,
-            "is_unique": false,
-            "boost": false,
-            "included_in_content": true,
-            "included_in_completion": false,
-            "ignore_on_export": false,
-            "stored_in_graph": false,
-            "name": "FitnessEvent_Eventname",
-            "labels": {
-              "en-US": "Event name",
-              "ja-JP": "イベント名"
-            },
-            "helptext": {},
-            "is_conditional": false,
-            "conditions": [],
-            "can_trigger_conditional_members": false,
-            "is_system_owned": false,
-            "is_secured": false,
-            "allow_updates": true
-          },
-          {
-            "type": "String",
-            "content_type": 2,
-            "validation_expression": null,
-            "is_indexed": false,
-            "is_mandatory": false,
-            "is_multilanguage": false,
-            "is_multivalue": false,
-            "is_unique": false,
-            "boost": false,
-            "included_in_content": true,
-            "included_in_completion": false,
-            "ignore_on_export": false,
-            "stored_in_graph": false,
-            "name": "FitnessEvent_Eventdescription",
-            "labels": {
-              "en-US": "Event description",
-              "ja-JP": "イベント詳細"
-            },
-            "helptext": {},
-            "is_conditional": false,
-            "conditions": [],
-            "can_trigger_conditional_members": false,
-            "is_system_owned": false,
-            "is_secured": false,
-            "allow_updates": true
-          },
-          {
-            "type": "String",
-            "content_type": 0,
-            "validation_expression": null,
-            "is_indexed": false,
-            "is_mandatory": false,
-            "is_multilanguage": false,
-            "is_multivalue": false,
-            "is_unique": false,
-            "boost": false,
-            "included_in_content": true,
-            "included_in_completion": false,
-            "ignore_on_export": false,
-            "stored_in_graph": false,
-            "name": "FitnessEvent_Eventlatitude",
-            "labels": {
-              "en-US": "Event latitude",
-              "ja-JP": "イベント緯度"
-            },
-            "helptext": {},
-            "is_conditional": false,
-            "conditions": [],
-            "can_trigger_conditional_members": false,
-            "is_system_owned": false,
-            "is_secured": false,
-            "allow_updates": true
-          },
-          {
-            "type": "String",
-            "content_type": 0,
-            "validation_expression": null,
-            "is_indexed": false,
-            "is_mandatory": false,
-            "is_multilanguage": false,
-            "is_multivalue": false,
-            "is_unique": false,
-            "boost": false,
-            "included_in_content": true,
-            "included_in_completion": false,
-            "ignore_on_export": false,
-            "stored_in_graph": false,
-            "name": "FitnessEvent_Eventlongitude",
-            "labels": {
-              "en-US": "Event longitude",
-              "ja-JP": "イベント経度"
-            },
-            "helptext": {},
-            "is_conditional": false,
-            "conditions": [],
-            "can_trigger_conditional_members": false,
-            "is_system_owned": false,
-            "is_secured": false,
-            "allow_updates": true
-          }
-        ],
-        "is_system_owned": false,
-        "is_conditional": true,
-        "conditions": [
-          {
-            "value": {
-              "href": "M.ContentType.FitnessEvent"
-            },
-            "member": "ContentTypeToContent"
-          }
-        ],
-        "is_secured": false
-      },
-      {
-        "name": "FitnessEvent_Brief",
-        "content_group": "brief",
-        "labels": {
-          "en-US": "Fitness Event details",
-          "ja-JP": "フィットネスイベント詳細"
-        },
-        "members": [
-          {
-            "type": "DateTime",
-            "is_indexed": false,
-            "is_mandatory": false,
-            "is_multilanguage": false,
-            "is_multivalue": false,
-            "is_unique": false,
-            "boost": false,
-            "included_in_content": true,
-            "included_in_completion": false,
-            "ignore_on_export": false,
-            "stored_in_graph": false,
-            "name": "FitnessEvent_Eventdate",
-            "labels": {
-              "en-US": "Event date",
-              "ja-JP": "イベント日付"
-            },
-            "helptext": {},
-            "is_conditional": false,
-            "conditions": [],
-            "can_trigger_conditional_members": false,
-            "is_system_owned": false,
-            "is_secured": false,
-            "allow_updates": true
-          }
-        ],
-        "is_system_owned": false,
-        "is_conditional": true,
-        "conditions": [
-          {
-            "value": {
-              "href": "M.ContentType.FitnessEvent"
-            },
-            "member": "ContentTypeToContent"
-          }
-        ],
-        "is_secured": false
-      },
-      {
-        "name": "Guide_Content",
-        "content_group": "content",
-        "labels": {
-          "en-US": "Content",
-          "ja-JP": "コンテンツ"
-        },
-        "members": [
-          {
-            "type": "String",
-            "content_type": 0,
-            "validation_expression": null,
-            "is_indexed": false,
-            "is_mandatory": false,
-            "is_multilanguage": false,
-            "is_multivalue": false,
-            "is_unique": false,
-            "boost": false,
-            "included_in_content": true,
-            "included_in_completion": false,
-            "ignore_on_export": false,
-            "stored_in_graph": false,
-            "name": "Guide_Title",
-            "labels": {
-              "en-US": "Title",
-              "ja-JP": "タイトル"
-            },
-            "helptext": {},
-            "is_conditional": false,
-            "conditions": [],
-            "can_trigger_conditional_members": false,
-            "is_system_owned": false,
-            "is_secured": false,
-            "allow_updates": true
-          },
-          {
-            "type": "String",
-            "content_type": 1,
-            "validation_expression": null,
-            "is_indexed": false,
-            "is_mandatory": false,
-            "is_multilanguage": false,
-            "is_multivalue": false,
-            "is_unique": false,
-            "boost": false,
-            "included_in_content": true,
-            "included_in_completion": false,
-            "ignore_on_export": false,
-            "stored_in_graph": false,
-            "name": "Guide_Introduction",
-            "labels": {
-              "en-US": "Introduction",
-              "ja-JP": "紹介"
-            },
-            "helptext": {
-              "en-US": "Introduction - shown on listing page",
-              "ja-JP": "はじめに - リストのページに記載される"
-            },
-            "is_conditional": false,
-            "conditions": [],
-            "can_trigger_conditional_members": false,
-            "is_system_owned": false,
-            "is_secured": false,
-            "allow_updates": true
-          },
-          {
-            "type": "String",
-            "content_type": 2,
-            "validation_expression": null,
-            "is_indexed": false,
-            "is_mandatory": false,
-            "is_multilanguage": false,
-            "is_multivalue": false,
-            "is_unique": false,
-            "boost": false,
-            "included_in_content": true,
-            "included_in_completion": false,
-            "ignore_on_export": false,
-            "stored_in_graph": false,
-            "name": "Guide_Content",
-            "labels": {
-              "en-US": "Content"
-            },
-            "helptext": {},
-            "is_conditional": false,
-            "conditions": [],
-            "can_trigger_conditional_members": false,
-            "is_system_owned": false,
-            "is_secured": false,
-            "allow_updates": true
-          },
-          {
-            "type": "String",
-            "content_type": 2,
-            "validation_expression": null,
-            "is_indexed": false,
-            "is_mandatory": false,
-            "is_multilanguage": false,
-            "is_multivalue": false,
-            "is_unique": false,
-            "boost": false,
-            "included_in_content": true,
-            "included_in_completion": false,
-            "ignore_on_export": false,
-            "stored_in_graph": false,
-            "name": "Guide_Additionalcontent",
-            "labels": {
-              "en-US": "Additional content",
-              "ja-JP": "追加コンテンツ"
-            },
-            "helptext": {},
-            "is_conditional": false,
-            "conditions": [],
-            "can_trigger_conditional_members": false,
-            "is_system_owned": false,
-            "is_secured": false,
-            "allow_updates": true
-          }
-        ],
-        "is_system_owned": false,
-        "is_conditional": true,
-        "conditions": [
-          {
-            "value": {
-              "href": "M.ContentType.Guide"
-            },
-            "member": "ContentTypeToContent"
-          }
-        ],
-        "is_secured": false
-      },
-      {
-        "name": "Guide_Brief",
-        "content_group": "brief",
-        "labels": {
-          "en-US": "Guide details",
-          "ja-JP": "詳細ガイド"
-        },
-        "members": [],
-        "is_system_owned": false,
-        "is_conditional": true,
-        "conditions": [
-          {
-            "value": {
-              "href": "M.ContentType.Guide"
-            },
-            "member": "ContentTypeToContent"
-          }
-        ],
-        "is_secured": false
-      },
-      {
-        "name": "Main",
-        "labels": {
-          "en-US": "Main",
-          "ja-JP": "メイン"
-        },
-        "members": [],
-        "is_system_owned": true,
-        "is_conditional": false,
-        "conditions": [],
-        "is_secured": false
-      },
-      {
         "name": "PCM",
         "labels": {
           "en-US": "PCM",
           "ja-JP": "PCM"
         },
         "members": [
-          {
-            "type": "Relation",
-            "role": 1,
-            "cardinality": 2,
-            "associated_entitydefinition": {
-              "href": "M.PCM.ProductFamily",
-              "title": "The associated entity definition for this relation."
-            },
-            "child_is_mandatory": false,
-            "parent_is_mandatory": false,
-            "inherits_security": true,
-            "allow_navigation": true,
-            "is_nested": false,
-            "is_taxonomy_relation": true,
-            "is_taxonomy_hierarchy_relation": false,
-            "content_is_copied": true,
-            "completion_is_copied": false,
-            "is_path_relation": true,
-            "is_path_hierarchy_relation": false,
-            "path_hierarchy_score": 0,
-            "is_rendition_relation": false,
-            "associated_labels": {
-              "en-US": "Content",
-              "ja-JP": "コンテンツ"
-            },
-            "name": "PCMProductFamilyToContent",
-            "labels": {
-              "en-US": "Product family",
-              "ja-JP": "製品ファミリー"
-            },
-            "helptext": {},
-            "is_conditional": false,
-            "conditions": [],
-            "can_trigger_conditional_members": false,
-            "is_system_owned": false,
-            "is_secured": false,
-            "allow_updates": true
-          },
           {
             "type": "Relation",
             "role": 1,
@@ -2906,7 +2608,7 @@
             },
             "name": "PCMProductToContent",
             "labels": {
-              "en-US": "Product",
+              "en-US": "Products",
               "ja-JP": "製品"
             },
             "helptext": {},
@@ -2916,11 +2618,428 @@
             "is_system_owned": true,
             "is_secured": false,
             "allow_updates": true
+          },
+          {
+            "type": "Relation",
+            "role": 1,
+            "cardinality": 2,
+            "associated_entitydefinition": {
+              "href": "M.PCM.ProductFamily",
+              "title": "The associated entity definition for this relation."
+            },
+            "child_is_mandatory": false,
+            "parent_is_mandatory": false,
+            "inherits_security": true,
+            "allow_navigation": true,
+            "is_nested": false,
+            "is_taxonomy_relation": true,
+            "is_taxonomy_hierarchy_relation": false,
+            "content_is_copied": true,
+            "completion_is_copied": false,
+            "is_path_relation": true,
+            "is_path_hierarchy_relation": false,
+            "path_hierarchy_score": 0,
+            "is_rendition_relation": false,
+            "associated_labels": {
+              "en-US": "Content",
+              "ja-JP": "コンテンツ"
+            },
+            "name": "PCMProductFamilyToContent",
+            "labels": {
+              "en-US": "Product families",
+              "ja-JP": "製品ファミリー"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
           }
         ],
         "is_system_owned": true,
         "is_conditional": false,
         "conditions": [],
+        "is_secured": false
+      },
+      {
+        "name": "f6447_Content",
+        "content_group": "content",
+        "labels": {
+          "en-US": "Content (Article)",
+          "ja-JP": "コンテンツ（記事）"
+        },
+        "members": [],
+        "is_system_owned": false,
+        "is_conditional": false,
+        "conditions": [],
+        "is_secured": false
+      },
+      {
+        "name": "f6447_Brief",
+        "content_group": "brief",
+        "labels": {
+          "en-US": "Article details",
+          "ja-JP": "記事詳細"
+        },
+        "members": [],
+        "is_system_owned": false,
+        "is_conditional": false,
+        "conditions": [],
+        "is_secured": false
+      },
+      {
+        "name": "4f4e3_Content",
+        "content_group": "content",
+        "labels": {
+          "en-US": "Content",
+          "ja-JP": "コンテンツ"
+        },
+        "members": [
+          {
+            "type": "String",
+            "content_type": 0,
+            "validation_expression": null,
+            "is_indexed": false,
+            "is_mandatory": false,
+            "is_multilanguage": false,
+            "is_multivalue": false,
+            "is_unique": false,
+            "boost": false,
+            "included_in_content": true,
+            "included_in_completion": false,
+            "ignore_on_export": false,
+            "stored_in_graph": false,
+            "name": "4f4e3_Title",
+            "labels": {
+              "en-US": "Title",
+              "ja-JP": "タイトル"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
+          },
+          {
+            "type": "String",
+            "content_type": 1,
+            "validation_expression": null,
+            "is_indexed": false,
+            "is_mandatory": false,
+            "is_multilanguage": false,
+            "is_multivalue": false,
+            "is_unique": false,
+            "boost": false,
+            "included_in_content": true,
+            "included_in_completion": false,
+            "ignore_on_export": false,
+            "stored_in_graph": false,
+            "name": "4f4e3_Introduction",
+            "labels": {
+              "en-US": "Introduction",
+              "ja-JP": "序章"
+            },
+            "helptext": {
+              "en-US": "Introduction - shown on listing page",
+              "ja-JP": "序章 - リストページに表示"
+            },
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
+          },
+          {
+            "type": "String",
+            "content_type": 2,
+            "validation_expression": null,
+            "is_indexed": false,
+            "is_mandatory": false,
+            "is_multilanguage": false,
+            "is_multivalue": false,
+            "is_unique": false,
+            "boost": false,
+            "included_in_content": true,
+            "included_in_completion": false,
+            "ignore_on_export": false,
+            "stored_in_graph": false,
+            "name": "4f4e3_Content",
+            "labels": {
+              "en-US": "Content"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
+          },
+          {
+            "type": "String",
+            "content_type": 2,
+            "validation_expression": null,
+            "is_indexed": false,
+            "is_mandatory": false,
+            "is_multilanguage": false,
+            "is_multivalue": false,
+            "is_unique": false,
+            "boost": false,
+            "included_in_content": true,
+            "included_in_completion": false,
+            "ignore_on_export": false,
+            "stored_in_graph": false,
+            "name": "4f4e3_Additionalcontent",
+            "labels": {
+              "en-US": "Additional content",
+              "ja-JP": "追加コンテンツ"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
+          }
+        ],
+        "is_system_owned": false,
+        "is_conditional": true,
+        "conditions": [
+          {
+            "value": {
+              "href": "M.ContentType.Article"
+            },
+            "member": "ContentTypeToContent"
+          }
+        ],
+        "is_secured": false
+      },
+      {
+        "name": "4f4e3_Brief",
+        "content_group": "brief",
+        "labels": {
+          "en-US": "Article details",
+          "ja-JP": "追加記事"
+        },
+        "members": [],
+        "is_system_owned": false,
+        "is_conditional": true,
+        "conditions": [
+          {
+            "value": {
+              "href": "M.ContentType.Article"
+            },
+            "member": "ContentTypeToContent"
+          }
+        ],
+        "is_secured": false
+      },
+      {
+        "name": "7cbc2_Content",
+        "content_group": "content",
+        "labels": {
+          "en-US": "Content (Fitness event)",
+          "ja-JP": "コンテンツ（フィットネスイベント）"
+        },
+        "members": [
+          {
+            "type": "String",
+            "content_type": 0,
+            "validation_expression": null,
+            "is_indexed": false,
+            "is_mandatory": false,
+            "is_multilanguage": false,
+            "is_multivalue": false,
+            "is_unique": false,
+            "boost": false,
+            "included_in_content": true,
+            "included_in_completion": false,
+            "ignore_on_export": false,
+            "stored_in_graph": false,
+            "name": "7cbc2_Pagetitle",
+            "labels": {
+              "en-US": "Page title",
+              "ja-JP": "ページタイトル"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
+          },
+          {
+            "type": "String",
+            "content_type": 0,
+            "validation_expression": null,
+            "is_indexed": false,
+            "is_mandatory": false,
+            "is_multilanguage": false,
+            "is_multivalue": false,
+            "is_unique": false,
+            "boost": false,
+            "included_in_content": true,
+            "included_in_completion": false,
+            "ignore_on_export": false,
+            "stored_in_graph": false,
+            "name": "7cbc2_Eventname",
+            "labels": {
+              "en-US": "Event name",
+              "ja-JP": "イベント名"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
+          },
+          {
+            "type": "String",
+            "content_type": 2,
+            "validation_expression": null,
+            "is_indexed": false,
+            "is_mandatory": false,
+            "is_multilanguage": false,
+            "is_multivalue": false,
+            "is_unique": false,
+            "boost": false,
+            "included_in_content": true,
+            "included_in_completion": false,
+            "ignore_on_export": false,
+            "stored_in_graph": false,
+            "name": "7cbc2_Eventdescription",
+            "labels": {
+              "en-US": "Event description",
+              "ja-JP": "イベント概要"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
+          },
+          {
+            "type": "String",
+            "content_type": 0,
+            "validation_expression": null,
+            "is_indexed": false,
+            "is_mandatory": false,
+            "is_multilanguage": false,
+            "is_multivalue": false,
+            "is_unique": false,
+            "boost": false,
+            "included_in_content": true,
+            "included_in_completion": false,
+            "ignore_on_export": false,
+            "stored_in_graph": false,
+            "name": "7cbc2_Eventlatitude",
+            "labels": {
+              "en-US": "Event latitude",
+              "ja-JP": "イベント緯度"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
+          },
+          {
+            "type": "String",
+            "content_type": 0,
+            "validation_expression": null,
+            "is_indexed": false,
+            "is_mandatory": false,
+            "is_multilanguage": false,
+            "is_multivalue": false,
+            "is_unique": false,
+            "boost": false,
+            "included_in_content": true,
+            "included_in_completion": false,
+            "ignore_on_export": false,
+            "stored_in_graph": false,
+            "name": "7cbc2_Eventlongitude",
+            "labels": {
+              "en-US": "Event longitude",
+              "ja-JP": "イベント経度"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
+          }
+        ],
+        "is_system_owned": false,
+        "is_conditional": true,
+        "conditions": [
+          {
+            "value": {
+              "href": "M.ContentType.Fitnessevent"
+            },
+            "member": "ContentTypeToContent"
+          }
+        ],
+        "is_secured": false
+      },
+      {
+        "name": "7cbc2_Brief",
+        "content_group": "brief",
+        "labels": {
+          "en-US": "Fitness event details",
+          "ja-JP": "フィットネスイベント詳細"
+        },
+        "members": [
+          {
+            "type": "DateTime",
+            "is_indexed": false,
+            "is_mandatory": false,
+            "is_multilanguage": false,
+            "is_multivalue": false,
+            "is_unique": false,
+            "boost": false,
+            "included_in_content": true,
+            "included_in_completion": false,
+            "ignore_on_export": false,
+            "stored_in_graph": false,
+            "name": "7cbc2_Eventdate",
+            "labels": {
+              "en-US": "Event date",
+              "ja-JP": "イベント日付"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
+          }
+        ],
+        "is_system_owned": false,
+        "is_conditional": true,
+        "conditions": [
+          {
+            "value": {
+              "href": "M.ContentType.Fitnessevent"
+            },
+            "member": "ContentTypeToContent"
+          }
+        ],
         "is_secured": false
       },
       {
@@ -2997,10 +3116,10 @@
       "href": null
     },
     "modified_by": {
-      "href": "JmAMKfuyiUGw6VcjkRHNOw"
+      "href": "User:shinhara@sitecore.net"
     },
     "created_by": {
-      "href": "User.Administrator"
+      "href": "User:Administrator"
     },
     "self": {
       "href": "M.Content",
