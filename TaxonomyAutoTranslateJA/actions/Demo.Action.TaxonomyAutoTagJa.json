@@ -21,12 +21,12 @@
         "destinationType": "Topic",
         "headers": [
           {
-            "key": "token",
-            "value": "token"
-          },
-          {
             "key": "host_header",
             "value": "instancename"
+          },
+          {
+            "key": "token",
+            "value": "token"
           }
         ],
         "values": []
