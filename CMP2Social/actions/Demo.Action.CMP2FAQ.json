@@ -1,0 +1,95 @@
+{
+  "version": "2.0.0",
+  "data": {
+    "id": 12672,
+    "identifier": "Demo.Action.CMP2FAQ",
+    "cultures": [
+      "en-US",
+      "ja-JP"
+    ],
+    "properties": {
+      "Type": {
+        "identifier": "AzureServiceBus",
+        "labels": {
+          "en-US": "Azure Service Bus"
+        }
+      },
+      "Settings": {
+        "connectionString": "Endpoint=sb://sample.servicebus.windows.net/",
+        "destination": "m_faq",
+        "destinationType": "Topic",
+        "headers": [
+          {
+            "key": "host_header",
+            "value": "hostname"
+          },
+          {
+            "key": "token",
+            "value": "token"
+          }
+        ],
+        "values": []
+      },
+      "ActionExecutionScope": {
+        "identifier": "External",
+        "labels": {
+          "en-US": "External"
+        }
+      },
+      "ActionLabel": {},
+      "ActionName": "Demo - CMP to FAQ",
+      "DefinitionName": null,
+      "Defaults": null,
+      "PEG_DefinitionName": null
+    },
+    "relations": {
+      "ActionToScript": {
+        "children": []
+      },
+      "ActionToStateMachine": {
+        "children": []
+      },
+      "ActionToTemplate": {
+        "children": []
+      }
+    },
+    "created_by": {
+      "href": "hBWKuqAJfE2MRHQHNo8iiw"
+    },
+    "created_on": "2020-07-17T04:34:15.1501102Z",
+    "modified_by": {
+      "href": "hBWKuqAJfE2MRHQHNo8iiw"
+    },
+    "modified_on": "2020-07-17T04:37:14.0955589Z",
+    "entitydefinition": {
+      "href": "M.Action",
+      "title": "The entity definition for this entity"
+    },
+    "copy": {
+      "href": null
+    },
+    "permissions": {
+      "href": null
+    },
+    "lifecycle": {
+      "href": null
+    },
+    "saved_selections": {
+      "href": null
+    },
+    "roles": {
+      "href": null
+    },
+    "annotations": {
+      "href": null
+    },
+    "is_root_taxonomy_item": false,
+    "is_path_root": false,
+    "inherits_security": true,
+    "is_system_owned": false,
+    "version": 4,
+    "self": {
+      "href": "Demo.Action.CMP2FAQ"
+    }
+  }
+}
