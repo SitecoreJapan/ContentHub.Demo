@@ -1,0 +1,97 @@
+{
+  "version": "2.0.0",
+  "data": {
+    "id": 31849,
+    "identifier": "Demo.Action.CMP2Wordpress",
+    "cultures": [
+      "en-US",
+      "ja-JP"
+    ],
+    "properties": {
+      "Type": {
+        "identifier": "AzureServiceBus",
+        "labels": {
+          "en-US": "Azure Service Bus",
+          "ja-JP": "Azure Service Bus"
+        }
+      },
+      "Settings": {
+        "connectionString": "Endpoint=sb://sample.servicebus.windows.net/",
+        "destination": "m_blog",
+        "destinationType": "Topic",
+        "headers": [
+          {
+            "key": "host_header",
+            "value": "hostname"
+          },
+          {
+            "key": "token",
+            "value": "token"
+          }
+        ],
+        "values": []
+      },
+      "ActionExecutionScope": {
+        "identifier": "External",
+        "labels": {
+          "en-US": "External",
+          "ja-JP": "エクスターナル"
+        }
+      },
+      "ActionLabel": {},
+      "ActionName": "Demo - CMP to Wordpress",
+      "DefinitionName": null,
+      "Defaults": null,
+      "PEG_DefinitionName": null
+    },
+    "relations": {
+      "ActionToScript": {
+        "children": []
+      },
+      "ActionToStateMachine": {
+        "children": []
+      },
+      "ActionToTemplate": {
+        "children": []
+      }
+    },
+    "created_by": {
+      "href": "User:shinhara@sitecore.net"
+    },
+    "created_on": "2021-01-13T00:29:36.6996737Z",
+    "modified_by": {
+      "href": "User:shinhara@sitecore.net"
+    },
+    "modified_on": "2021-01-13T00:30:26.5703824Z",
+    "entitydefinition": {
+      "href": "M.Action",
+      "title": "The entity definition for this entity"
+    },
+    "copy": {
+      "href": null
+    },
+    "permissions": {
+      "href": null
+    },
+    "lifecycle": {
+      "href": null
+    },
+    "saved_selections": {
+      "href": null
+    },
+    "roles": {
+      "href": null
+    },
+    "annotations": {
+      "href": null
+    },
+    "is_root_taxonomy_item": false,
+    "is_path_root": false,
+    "inherits_security": true,
+    "is_system_owned": false,
+    "version": 5,
+    "self": {
+      "href": "Demo.Action.CMP2Wordpress"
+    }
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "version": "2.0.0",
+  "data": {
+    "id": 31850,
+    "identifier": "Demo.Trigger.CMP2Wordpress",
+    "cultures": [],
+    "properties": {
+      "Name": "Demo - CMP to Wordpress",
+      "Description": null,
+      "IsEnabled": true,
+      "RuleSet": {
+        "version": "1.0",
+        "variables": {
+          "mcontent_contentlifecycletocontentchild_is": {
+            "type": "entity_member",
+            "definition": "M.Content",
+            "member": "ContentLifeCycleToContent",
+            "role": "child",
+            "phase": "is"
+          },
+          "lookup_id_9796": {
+            "type": "entity_field_lookup",
+            "field": "id",
+            "by_identifier": "M.ContentLifeCycle.Final"
+          },
+          "mcontent_contenttypetocontentchild_was": {
+            "type": "entity_member",
+            "definition": "M.Content",
+            "member": "ContentTypeToContent",
+            "role": "child",
+            "phase": "was"
+          },
+          "lookup_id_9786": {
+            "type": "entity_field_lookup",
+            "field": "id",
+            "by_identifier": "M.ContentType.Blog"
+          },
+          "entity_definition_field": {
+            "type": "entity_definition_field",
+            "field": "name"
+          }
+        },
+        "condition": {
+          "version": "1.0",
+          "expression": {
+            "type": "and",
+            "children": [
+              {
+                "type": "and",
+                "children": [
+                  {
+                    "type": "?:",
+                    "if": {
+                      "type": "function",
+                      "name": "isnumber",
+                      "children": [
+                        {
+                          "type": "variable",
+                          "name": "lookup_id_9796"
+                        }
+                      ]
+                    },
+                    "then": {
+                      "type": "contains",
+                      "first": {
+                        "type": "variable",
+                        "name": "mcontent_contentlifecycletocontentchild_is"
+                      },
+                      "second": {
+                        "type": "variable",
+                        "name": "lookup_id_9796"
+                      }
+                    },
+                    "else": false
+                  },
+                  {
+                    "type": "?:",
+                    "if": {
+                      "type": "function",
+                      "name": "isnumber",
+                      "children": [
+                        {
+                          "type": "variable",
+                          "name": "lookup_id_9786"
+                        }
+                      ]
+                    },
+                    "then": {
+                      "type": "contains",
+                      "first": {
+                        "type": "variable",
+                        "name": "mcontent_contenttypetocontentchild_was"
+                      },
+                      "second": {
+                        "type": "variable",
+                        "name": "lookup_id_9786"
+                      }
+                    },
+                    "else": false
+                  }
+                ]
+              },
+              {
+                "type": "eq",
+                "first": {
+                  "type": "variable",
+                  "name": "entity_definition_field"
+                },
+                "second": "M.Content"
+              }
+            ]
+          }
+        }
+      },
+      "M.Trigger.Objective": [
+        {
+          "identifier": "EntityModification",
+          "labels": {
+            "en-US": "Entity modification",
+            "ja-JP": "エンティティの変更"
+          }
+        }
+      ],
+      "M.Trigger.Type": {
+        "identifier": "OutOfProcess",
+        "labels": {
+          "en-US": "In background",
+          "ja-JP": "バックグラウンドで"
+        }
+      },
+      "EventMessage": null
+    },
+    "relations": {
+      "TriggerToAction": {
+        "children": [
+          {
+            "href": "Demo.Action.CMP2Wordpress"
+          }
+        ]
+      },
+      "TriggerToPreAction": {
+        "children": []
+      },
+      "TriggerToSecurityPreAction": {
+        "children": []
+      },
+      "TriggerToValidationPreAction": {
+        "children": []
+      },
+      "TriggerToAuditPreAction": {
+        "children": []
+      }
+    },
+    "created_by": {
+      "href": "User:shinhara@sitecore.net"
+    },
+    "created_on": "2021-01-13T00:31:37.8859916Z",
+    "modified_by": {
+      "href": "User:shinhara@sitecore.net"
+    },
+    "modified_on": "2021-01-13T00:33:03.041495Z",
+    "entitydefinition": {
+      "href": "M.Trigger",
+      "title": "The entity definition for this entity"
+    },
+    "copy": {
+      "href": null
+    },
+    "permissions": {
+      "href": null
+    },
+    "lifecycle": {
+      "href": null
+    },
+    "saved_selections": {
+      "href": null
+    },
+    "roles": {
+      "href": null
+    },
+    "annotations": {
+      "href": null
+    },
+    "is_root_taxonomy_item": false,
+    "is_path_root": false,
+    "inherits_security": true,
+    "is_system_owned": false,
+    "version": 3,
+    "self": {
+      "href": "Demo.Trigger.CMP2Wordpress"
+    }
+  }
+}
