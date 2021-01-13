@@ -3046,7 +3046,8 @@
         "name": "Twitter_Content",
         "content_group": "content",
         "labels": {
-          "en-US": "Content ()"
+          "en-US": "Content (Twitter)",
+          "ja-JP": "コンテンツ（Twitter）"
         },
         "members": [
           {
@@ -3093,7 +3094,8 @@
         "name": "Twitter_Brief",
         "content_group": "brief",
         "labels": {
-          "en-US": " details"
+          "en-US": "Twitter details",
+          "ja-JP": "Twitter 詳細"
         },
         "members": [],
         "is_system_owned": false,
@@ -3102,6 +3104,101 @@
           {
             "value": {
               "href": "M.ContentType.Twitter"
+            },
+            "member": "ContentTypeToContent"
+          }
+        ],
+        "is_secured": false
+      },
+      {
+        "name": "FAQ_Content",
+        "content_group": "content",
+        "labels": {
+          "en-US": "Content (FAQ)",
+          "ja-JP": "コンテンツ FAQ"
+        },
+        "members": [
+          {
+            "type": "String",
+            "content_type": 0,
+            "validation_expression": null,
+            "is_indexed": false,
+            "is_mandatory": false,
+            "is_multilanguage": false,
+            "is_multivalue": false,
+            "is_unique": false,
+            "boost": false,
+            "included_in_content": true,
+            "included_in_completion": false,
+            "ignore_on_export": false,
+            "stored_in_graph": false,
+            "name": "FAQ_Question",
+            "labels": {
+              "en-US": "Question",
+              "ja-JP": "質問"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
+          },
+          {
+            "type": "String",
+            "content_type": 0,
+            "validation_expression": null,
+            "is_indexed": false,
+            "is_mandatory": false,
+            "is_multilanguage": false,
+            "is_multivalue": false,
+            "is_unique": false,
+            "boost": false,
+            "included_in_content": true,
+            "included_in_completion": false,
+            "ignore_on_export": false,
+            "stored_in_graph": false,
+            "name": "FAQ_Answer",
+            "labels": {
+              "en-US": "Answer",
+              "ja-JP": "回答"
+            },
+            "helptext": {},
+            "is_conditional": false,
+            "conditions": [],
+            "can_trigger_conditional_members": false,
+            "is_system_owned": false,
+            "is_secured": false,
+            "allow_updates": true
+          }
+        ],
+        "is_system_owned": false,
+        "is_conditional": true,
+        "conditions": [
+          {
+            "value": {
+              "href": "M.ContentType.FAQ"
+            },
+            "member": "ContentTypeToContent"
+          }
+        ],
+        "is_secured": false
+      },
+      {
+        "name": "FAQ_Brief",
+        "content_group": "brief",
+        "labels": {
+          "en-US": "FAQ details",
+          "ja-JP": "FAQ 詳細"
+        },
+        "members": [],
+        "is_system_owned": false,
+        "is_conditional": true,
+        "conditions": [
+          {
+            "value": {
+              "href": "M.ContentType.FAQ"
             },
             "member": "ContentTypeToContent"
           }

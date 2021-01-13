@@ -1,0 +1,61 @@
+{
+  "version": "2.0.0",
+  "data": {
+    "id": 15326,
+    "identifier": "M.ContentType.FAQ",
+    "cultures": [
+      "en-US",
+      "ja-JP"
+    ],
+    "properties": {
+      "ContentType.Label": {
+        "en-US": "FAQ",
+        "ja-JP": "FAQ"
+      },
+      "ContentType.Prefix": "FAQ",
+      "Entity.Visualization": {
+        "icon": "m-icon-quill",
+        "color": "green"
+      }
+    },
+    "relations": {},
+    "created_by": {
+      "href": "hBWKuqAJfE2MRHQHNo8iiw"
+    },
+    "created_on": "2021-01-12T06:19:57.9258901Z",
+    "modified_by": {
+      "href": "hBWKuqAJfE2MRHQHNo8iiw"
+    },
+    "modified_on": "2021-01-12T06:19:57.9258901Z",
+    "entitydefinition": {
+      "href": "M.ContentType",
+      "title": "The entity definition for this entity"
+    },
+    "copy": {
+      "href": null
+    },
+    "permissions": {
+      "href": null
+    },
+    "lifecycle": {
+      "href": null
+    },
+    "saved_selections": {
+      "href": null
+    },
+    "roles": {
+      "href": null
+    },
+    "annotations": {
+      "href": null
+    },
+    "is_root_taxonomy_item": true,
+    "is_path_root": true,
+    "inherits_security": true,
+    "is_system_owned": false,
+    "version": 1,
+    "self": {
+      "href": "M.ContentType.FAQ"
+    }
+  }
+}
